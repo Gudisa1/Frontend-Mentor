@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.google.com/specimen/Montserrat");
+      @import url("https://fonts.google.com/specimen/Fraunces");
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+      }
+      .product-section {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: hsl(30, 38%, 92%);
+        box-shadow: 0px 24px 24px 22px rgba(0, 0, 0, 0.1);
+      }
+      .product-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 420px;
+        width: 500px;
+        border-radius: 12px;
+        box-shadow: 0px 24px 24px 22px rgba(0, 0, 0, 0.1);
+      }
+      .product-image {
+        width: 250px;
+        height: 420px;
+        border-radius: 8px 0 0 8px;
+      }
+      .perfume {
+        font-family: Fraunces;
+        font-weight: 500;
+        letter-spacing: 5px;
+        font-size: 14px;
+        color: #ced4da;
+        opacity: 0.8;
+        line-height: 1.1;
+        margin-left: 24px;
+        margin-top: 32px;
+      }
+      .product-detail {
+        font-size: 14px;
+        font-family: Fraunces;
+        font-weight: 500;
+        color: #868e96;
+        line-height: 1.5;
+        margin-left: 24px;
+        margin-top: 0px;
+      }
+      .price {
+        margin-left: 24px;
+      }
+      .price-current {
+        font-size: 32px;
+        font-weight: 700;
+        color: hsl(158, 36%, 37%);
+        font-family: Montserrat;
+        margin-right: 12px;
+      }
+      .price-striked {
+        font-size: 18px;
+        font-family: Fraunces;
+        text-decoration: line-through;
+        color: #868e96;
+        font-weight: 500;
+      }
+      .name {
+        font-size: 38px;
+        font-family: Fraunces;
+        margin-left: 24px;
+        line-height: 1;
+        margin-top: 0px;
+      }
+      .add-to-chart {
+        display: flex;
+        padding: 7px 50px;
+        background-color: hsl(158, 36%, 37%);
+        color: hsl(0, 0%, 100%);
+        font-weight: 500;
+        font-family: sans-serif;
+        border: none;
+        border-radius: 5px;
+        margin-left: 24px;
+        padding-bottom: -20px;
+        cursor: pointer;
+      }
+
+      .icon {
+        height: 24px;
+        width: 24px;
+        margin-top: px;
+      }
+      @media (max-width: 375px) {
+        .product-card {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-section">
+      <div class="product-card">
+        <div class="product-image">
+          <img
+            src="images/image-product-desktop.jpg"
+            alt=""
+            class="product-image"
+          />
+        </div>
+        <div class="product-description">
+          <p class="perfume">PERFUME</p>
+          <h2 class="name">Gabrielle Essence Eau De Parfum</h2>
+          <p class="product-detail">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <p class="price">
+            <span class="price-current"> $149.99</span
+            ><span class="price-striked">$169.99</span>
+          </p>
+          <button class="add-to-chart">
+            <svg
+              width="15"
+              height="16"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+                fill="#FFF"
+              /></svg
+            >Add to Cart
+          </button>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://twitter.com/GudisaGebi">Gudisa Gebi</a>.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
